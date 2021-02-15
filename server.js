@@ -10,6 +10,9 @@ class App {
     this.initialDatabase();
   }
   initialMiddlewares() {
+    app.get('/',(req,res)=>{
+      res.json("home")
+    })
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
     app.use(routes);
