@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
 const routes = require("./src/routes");
+const port = process.env.PORT || 3000;
+
 class App {
   constructor() {
     this.initialServer();
@@ -10,9 +12,9 @@ class App {
     this.initialDatabase();
   }
   initialMiddlewares() {
-    app.get('/',(req,res)=>{
-      res.json("home")
-    })
+    app.get("/", (req, res) => {
+      res.json("home");
+    });
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
     app.use(routes);
@@ -36,8 +38,8 @@ class App {
       });
   }
   initialServer() {
-    app.listen(8086 || process.env.PORT, () => {
-      console.log(`server is running ${8086}`);
+    app.listen(port, () => {
+      console.log(`server is running ${port}`);
     });
   }
 }
