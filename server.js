@@ -6,8 +6,8 @@ const routes = require("./src/routes");
 class App {
   constructor() {
     this.initialServer();
-    this.initialDatabase();
     this.initialMiddlewares();
+    this.initialDatabase();
   }
   initialMiddlewares() {
     app.use(bodyParser.urlencoded({ extended: true }));
