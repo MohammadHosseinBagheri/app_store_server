@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 const routes = require("./src/routes");
 const port = process.env.PORT || 3000;
-
+const cors = require("cors");
 class App {
   constructor() {
     this.initialServer();
@@ -18,6 +18,7 @@ class App {
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
     app.use(routes);
+    app.use(cors());
   }
   initialDatabase() {
     const connectionParams = {
