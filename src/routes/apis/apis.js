@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const applicationsApi = require("./applications");
-router.use("/applications", applicationsApi);
+const cors = require("cors");
+router.use("/applications", cors(), applicationsApi);
 module.exports = router;
