@@ -9,7 +9,7 @@ const ApplicationSchema = mongoose.Schema({
   companyName: { type: String, required: true },
   version: { type: String, default: "1" },
   installNumber: { type: String },
-  comments: { type: Object, default: {} },
+  comments: { type: Array, default: {} },
   description: { type: String, required: true },
 });
 const ApplicationModel = mongoose.model("application", ApplicationSchema);
