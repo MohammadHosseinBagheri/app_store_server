@@ -4,8 +4,10 @@ const ApplicationModel = require("../../models/Application");
 const registerApplication = require("./registerApplication");
 const getAllApplications=require('./getApplications')
 const addComment=require('../apis/addComment');
+const cors = require("cors");
+
 // router.post("/register", appValidation(), (req, res) => {
 router.use("/register", registerApplication);
 router.use("/get", getAllApplications);
-router.use("/add-comment",addComment)
+router.use("/add-comment",cors(),addComment)
 module.exports = router;
