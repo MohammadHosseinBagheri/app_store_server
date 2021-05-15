@@ -4,7 +4,7 @@ const ApplicationSchema = mongoose.Schema({
   categori: { type: String, required: true },
   tag: { type: String, required: true, enum: ["driver", "game", "etc","food"] },
   size: { type: String, required: true },
-  images: { type: Object, default: {} },
+  imgUrl: { type: String, default: ""},
   rate: { type: String, default: "4" },
   companyName: { type: String, required: true },
   version: { type: String, default: "1" },
