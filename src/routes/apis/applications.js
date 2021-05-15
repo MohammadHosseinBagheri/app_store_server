@@ -9,12 +9,6 @@ const cors = require("cors");
 // router.post("/register", appValidation(), (req, res) => {
 router.use("/register", registerApplication);
 router.use("/get", getAllApplications);
-const test = (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
 
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-
-};
-router.use("/add-comment", test, addComment);
+router.use("/add-comment", addComment);
 module.exports = router;
