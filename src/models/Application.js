@@ -11,6 +11,7 @@ const ApplicationSchema = mongoose.Schema({
   installNumber: { type: String },
   comments: { type: Array, default: {} },
   description: { type: String, required: true },
+  price:{type:String,required:true}
 });
 const ApplicationModel = mongoose.model("application", ApplicationSchema);
 module.exports = ApplicationModel;

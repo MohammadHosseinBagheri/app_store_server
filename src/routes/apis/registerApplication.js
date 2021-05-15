@@ -17,6 +17,7 @@ router.post("/", (req, res) => {
     installNumber,
     comments,
     description,
+    price
   } = req.body;
   //errors
   //   const errors = validationResult(req);
@@ -37,6 +38,7 @@ router.post("/", (req, res) => {
     installNumber,
     comments,
     description,
+    price
   });
   newApplication.save(opt=>console.log(opt));
   res.status(200).json("ok");
