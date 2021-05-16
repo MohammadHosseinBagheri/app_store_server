@@ -18,8 +18,20 @@ router.post("/", (req, res) => {
         price,
         product,
       });
-      newFactor.save();
-      res.status(200).json({newFactor,email:doc.email,name:doc.name});
+      newFactor.save((doc) => console.log(doc));
+      res.status(200).json({ newFactor, email: doc.email, name: doc.name });
+    }
+  });
+});
+router.get("/", (req, res) => {
+  const { id } = req.query;
+  PeymentModel.find({ id }, (err, doc) => {
+    if (err) {
+      res.status(500).json(err);
+    } else if (doc.length === 0) {
+      res.status(200).json([]);
+    } else {
+      res.status(200).json(doc);
     }
   });
 });
