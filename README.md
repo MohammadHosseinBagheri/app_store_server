@@ -12,6 +12,6 @@ add comment
 signin
 ## https://still-headland-88471.herokuapp.com/api/signin   method:post
 register
-## https://still-headland-88471.herokuapp.com/api/register   method:post
+## https://still-headland-88471.herokuapp.com/api/signup   method:post
 peyment
 ## https://still-headland-88471.herokuapp.com/api/peyment   method:post
