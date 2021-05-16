@@ -15,3 +15,4 @@ register
 ## https://still-headland-88471.herokuapp.com/api/signup   method:post
 peyment
 ## https://still-headland-88471.herokuapp.com/api/peyment   method:post
+## https://still-headland-88471.herokuapp.com/api/peyment?id=...   method:get
